@@ -64,7 +64,24 @@ namespace ii.InfinityEngine.Binary
         public byte AnchorCoordinateY2;
     }
 
-    // Slider
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
+    struct ChuControlSlider
+    {
+        public array8 BackgroundImageMos;
+        public array8 KnobImageMos;
+        public Int16 CycleNumber;
+        public Int16 FrameIndexUngrabbed;
+        public Int16 FrameIndexGrabbed;
+        public Int16 KnobXOffset;
+        public Int16 KnobYOffset;
+        public Int16 KnobJumpWidth;
+        public Int16 KnobJumpCount;
+        public Int16 Unknown2c;
+        public Int16 Unknown2e;
+        public Int16 Unknown30;
+        public Int16 Unknown32;
+    }
+
     // TextEdit
     // TextArea
     // Label
