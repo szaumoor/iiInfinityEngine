@@ -82,8 +82,57 @@ namespace ii.InfinityEngine.Binary
         public Int16 Unknown32;
     }
 
-    // TextEdit
-    // TextArea
-    // Label
-    // Scrollbar
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
+    struct ChuControlTextEdit
+    {
+        public array8 BackgroundImageMos1;
+        public array8 BackgroundImageMos2;
+        public array8 BackgroundImageMos3;
+        public array8 CursorImageBam;
+        public Int16 CarotAnimationCycle;
+        public Int16 CarotAnimationFrame;
+        public Int16 XCoordinate;
+        public Int16 YCoordinate;
+        public Int32 ScrollbarControlId;
+        public array8 FontBam;
+        public Int16 Unknown42;
+        public array32 InitialText;
+        public Int16 MaxLength;
+        public Int32 TextCase;
+    }
+
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
+    struct ChuControlTextArea
+    {
+        public array8 InitialFontBam;
+        public array8 MainFontBam;
+        public array4 MainColourRGBA;
+        public array4 InitialColourRGBA;
+        public array4 BackgroundColourRGBA;
+        public Int32 ScrollbarControlId;        
+    }
+
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
+    struct ChuControlTextLabel
+    {
+        public Int32 InitialText;
+        public array8 FontBam;
+        public array4 TextColourRGBA;
+        public array4 BackgroundColourRGBA;
+        public Int16 JustificationFlags;
+    }
+
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
+    struct ChuControlTextScrollbar
+    {
+        public array8 Bam;
+        public Int16 Cycle;
+        public Int16 FrameIndexUpUnpressed;
+        public Int16 FrameIndexUpPressed;
+        public Int16 FrameIndexDownUnpressed;
+        public Int16 FrameIndexDownPressed;
+        public Int16 FrameIndexTrough;
+        public Int16 FrameIndexSlider;
+        public Int32 ControlId;
+    }
 }
